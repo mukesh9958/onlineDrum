@@ -39,8 +39,8 @@ Verbsoe = False
 
 # importing the audio files
 mixer.init()
-drum_clap = mixer.Sound('./Sound/batterrm.wav')
-drum_snare = mixer.Sound('./Sound/button-2.ogg')
+drum_clap = mixer.Sound('batterrm.wav')
+drum_snare = mixer.Sound('button-2.ogg')
 
 
 # HSV range for detecting blue color 
@@ -55,8 +55,8 @@ H,W = frame.shape[:2]
 kernel = np.ones((7,7),np.uint8)
 
 # reading the image of hatt and snare for augmentation.
-Hatt = cv2.resize(cv2.imread('./Images/Hatt.png'),(200,100),interpolation=cv2.INTER_CUBIC)
-Snare = cv2.resize(cv2.imread('./Images/Snare.png'),(200,100),interpolation=cv2.INTER_CUBIC)
+Hatt = cv2.resize(cv2.imread('Hatt.png'),(200,100),interpolation=cv2.INTER_CUBIC)
+Snare = cv2.resize(cv2.imread('Snare.png'),(200,100),interpolation=cv2.INTER_CUBIC)
 
 
 # Setting the ROI area for blue color detection
